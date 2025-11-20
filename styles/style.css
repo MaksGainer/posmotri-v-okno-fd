@@ -107,7 +107,7 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
-  gap: 26px;
+  gap: 22px;
   width: 100%;
   height: 100%;
 }
@@ -119,6 +119,7 @@ ol {
   flex-direction: column;
   height: 298px;
   overflow: auto;
+  gap: 30px;
 }
 
 .title {
@@ -147,10 +148,6 @@ ol {
   padding-right: 3px;
 }
 
-.content__list-item:last-child {
-  margin-bottom: 30px;
-}
-
 .content__video-card {
   display: flex;
   align-items: flex-start;
@@ -171,6 +168,7 @@ ol {
     Oswald, 
     sans-serif;
   font-weight: 700;
+
   font-size: 30px;
   text-transform: uppercase;
   white-space: nowrap;
@@ -228,7 +226,7 @@ ol {
   font-size: inherit;
   color: #fff;
   width: 225px;
-  height: 27px;
+  min-height: 27px;
   padding: 2.5px 0;
   background-color: transparent;
   appearance: none;
@@ -276,6 +274,10 @@ ol {
   cursor: pointer;
 }
 
+.search-form__checkbox:checked ~ .search-form__label-text {
+    text-decoration: none;
+}
+
 .search-form__checkbox:focus {
   outline: none;
 }
@@ -286,6 +288,7 @@ ol {
 }
 
 .button {
+  min-height: 34px;
   border: 1px solid #fff;
   font-family:
     Fira Sans Condensed,
@@ -300,13 +303,11 @@ ol {
 
 .search-form__submit-button {
   width: 193px;
-  height: 34px;
   align-self: flex-end;
 }
 
 .more-button {
   width: 390px;
-  height: 34px;
   flex-shrink: 0;
 }
 
@@ -316,6 +317,7 @@ ol {
 
 .button:active {
   background-color: #545050;
+  text-decoration: none;
 }
 
 .button:focus {
@@ -331,21 +333,26 @@ ol {
   background-color: #545050;
 }
 
-.content__card-link_current:active {
+.content__card-link:active {
   background-color: #545050;
 }
 
-.content__video-card:hover {
+
+.content__card-link:hover {
   text-decoration: underline;
   text-underline-offset: 1px;
   text-decoration-thickness: 1px;
 }
 
-.content__video-card:focus {
+.content__card-link:active {
+  text-decoration: none;
+}
+
+.content__card-link:focus {
   outline: none;
 }
 
-.content__video-card:focus-visible {
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
